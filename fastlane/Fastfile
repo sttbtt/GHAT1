@@ -54,7 +54,7 @@ platform :ios do
   lane :build_upload_testflight do
     match(
       type: "appstore", readonly: true,
-      git_basic_authoriztion: Base64.strict_encode64(ENV["GIT_AUTHORIZTION"])
+      git_basic_authorization: Base64.strict_encode64(ENV["GIT_AUTHORIZATION"])
     )
     load_asc_api_key
     prepare_signing
