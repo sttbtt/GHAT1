@@ -1,7 +1,11 @@
 name: iOS binary build & upload
 
 on:
- workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
  deploy:
@@ -29,6 +33,7 @@ jobs:
          ASC_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
          SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DIST_SIGNING_KEY_PASSWORD }}
          SIGNING_KEY_FILE_PATH: signing-cert.p12
+         GIT_AUTHORIZTION: ${{ secrets.GIT_AUTHORIZATION }}
 
      - name: Upload app-store ipa and dsyms to artifacts
        uses: actions/upload-artifact@v2
