@@ -42,7 +42,7 @@ platform :ios do
 # THIS LANE UPLOADS TO TESTFLIGHT LOCALLY
   desc "Push a new beta build to TestFlight Locally"
   lane :beta_local do
-    match(type: "appstore", readonly: true)
+    match(type: "AppStore", readonly: true)
     increment_build_number(xcodeproj: "GHAT1.xcodeproj")
     build_app(scheme: "GHAT1")
     upload_to_testflight
@@ -53,7 +53,7 @@ platform :ios do
   desc "Build and upload to TestFlight"
   lane :build_upload_testflight do
     match(
-      type: "appstore", #readonly: true,
+      type: "AppStore", readonly: true,
       git_basic_authorization: Base64.strict_encode64(ENV["GIT_AUTHORIZATION"])
     )
     load_asc_api_key
@@ -112,7 +112,7 @@ platform :ios do
   desc "Push a new beta build to TestFlight with Github Actions"
   lane :beta do
     setup_ci if ENV['CI']
-    match(type: 'appstore')
+    match(type: "AppStore")
     build_app
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
