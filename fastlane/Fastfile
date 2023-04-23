@@ -43,7 +43,7 @@ platform :ios do
   desc "Push a new beta build to TestFlight Locally"
   lane :beta do
     setup_ci if ENV['CI']
-    sync_code_signing(
+    match(
       type: "appstore", readonly: true,
       git_basic_authorization: Base64.strict_encode64(ENV["GIT_AUTHORIZATION"])
     )
