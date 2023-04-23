@@ -32,7 +32,9 @@ platform :ios do
     # )
     app_store_connect_api_key()
     sync_code_signing(
-      type: "appstore", readonly: true,
+      type: "appstore",
+      readonly: true,
+      app_identifier: ["dev.scottbennett.GHAT1"],
       # api_key: api_key,
       git_basic_authorization: Base64.strict_encode64(ENV["GIT_AUTHORIZATION"])
     )
