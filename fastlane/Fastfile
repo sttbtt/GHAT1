@@ -42,6 +42,7 @@ platform :ios do
 # THIS LANE UPLOADS TO TESTFLIGHT LOCALLY
   desc "Push a new beta build to TestFlight Locally"
   lane :beta do
+    xcversion(version: "14.3")
     match(
       type: "appstore", readonly: true,
       git_basic_authorization: Base64.strict_encode64(ENV["GIT_AUTHORIZATION"])
@@ -120,14 +121,14 @@ platform :ios do
 #     upload_to_testflight(skip_waiting_for_build_processing: true)
 #   end
 #
-# # EXTRA UTILS
-#   desc "Installs certificate type on system"
-#   lane :sync_all_development do
-#     match(type: "development")
-#   end
-#
-#   desc "Refresh certificates"
-#   lane :certificates do
-#     match(app_identifier: ["dev.scottbennett.MGHTest2"])
-#   end
+# EXTRA UTILS
+  desc "Installs certificate type on system"
+  lane :sync_all_development do
+    match(type: "development")
+  end
+
+  desc "Refresh certificates"
+  lane :certificates do
+    match(app_identifier: ["dev.scottbennett.GHAT1"])
+  end
 end
