@@ -42,7 +42,7 @@ platform :ios do
 # THIS LANE UPLOADS TO TESTFLIGHT LOCALLY
   desc "Push a new beta build to TestFlight Locally"
   lane :beta do
-    xcversion(version: "14.3")
+    xcodes(version: "14.3")
     match(
       type: "appstore", readonly: true,
       git_basic_authorization: Base64.strict_encode64(ENV["GIT_AUTHORIZATION"])
