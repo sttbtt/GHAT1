@@ -17,6 +17,8 @@ default_platform(:ios)
 
 platform :ios do
 
+  APP_STORE_CONNECT_API_KEY =
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
 
@@ -32,7 +34,8 @@ platform :ios do
     )
 
     # Match - Automatically loads Actions.lane_context[SharedValues::APP_STORE_CONNECT_API_KEY]
-    sync_code_signing(
+    # sync_code_signing(
+    match(
       type: "appstore",
       readonly: true,
       app_identifier: ["dev.scottbennett.GHAT1"],
@@ -43,10 +46,12 @@ platform :ios do
     # add cd "${PROJECT_DIR}" ; agvtool bump to build scheme
 
     # Builds app for TestFlight
-    build_app(scheme: "GHAT1")
+    # build_app(scheme: "GHAT1")
+    gym(scheme: "GHAT1")
 
     # Uploads app to TestFlight
-    upload_to_testflight(skip_waiting_for_build_processing: true)
+    # upload_to_testflight(skip_waiting_for_build_processing: true)
+    pilot(skip_waiting_for_build_processing: true)
   end
 
 
