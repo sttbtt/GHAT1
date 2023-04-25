@@ -4,12 +4,19 @@
 
 # Data Needed:
 APP_STORE_CONNECT_KEY_ID: https://appstoreconnect.apple.com/access/api
+
 APP_STORE_CONNECT_ISSUER_ID: https://appstoreconnect.apple.com/access/api
+
 APP_STORE_CONNECT_PRIVATE_KEY: Download and keep in safe place when first created
+
 FASTLANE_PASSWORD: App-Specific Password for fastlane - https://appleid.apple.com/account/manage
+
 GIT_AUTHORIZATION: <YOUR_GITUSERNAME>:<YOUR_PERSONAL_ACCESS_TOKEN>
+
 IOS_DIST_SIGNING_KEY: Export from keychain then run  base64 -i Certificates.p12 | pbcopy
-IOS_DIST_SIGNING_KEY_PASSWORD: Apple developer password 
+
+IOS_DIST_SIGNING_KEY_PASSWORD: Apple developer password
+
 MATCH_PASSWORD: Created when setting up match
 
 
