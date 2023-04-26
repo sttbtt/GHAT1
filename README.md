@@ -126,7 +126,7 @@ a push, pull or manually (workflow_dispatch)
               APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
 
 ## To Uplaod to TestFlight
-  Build the app at least once since last upload to increment build number
+  Build the app at least once since last upload to increment build number  
   Commit
 
 ## Setup Provisioning on new developer machine
