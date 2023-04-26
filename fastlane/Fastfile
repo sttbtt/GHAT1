@@ -23,7 +23,7 @@ platform :ios do
     # Check to see if on CI, will hang if not present
     setup_ci if ENV["CI"]
 
-    # Setup Provisioning
+    # Setup App Store Connect API token
     app_store_connect_api_key(
       is_key_content_base64: true
     )
@@ -37,10 +37,15 @@ platform :ios do
     )
 
     # Builds app (build_app)
-    gym(scheme: "GHAT1")
+    gym(
+      scheme: "GHAT1"
+    )
 
     # Uploads app to TestFlight (upload_to_testflight)
-    pilot(skip_waiting_for_build_processing: true)
+    pilot(
+      skip_waiting_for_build_processing: true
+    )
+    
   end
 
 
