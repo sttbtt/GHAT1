@@ -25,14 +25,10 @@ platform :ios do
 
     # Setup Provisioning
     app_store_connect_api_key(
-      # key_id: ENV["APP_STORE_CONNECT_API_KEY_KEY_ID"],
-      # issuer_id: ENV["APP_STORE_CONNECT_API_KEY_ISSUER_ID"],
-      # key_content: ENV["APP_STORE_CONNECT_API_KEY_KEY"],
       is_key_content_base64: true
     )
 
-    # Match - Automatically loads Actions.lane_context[SharedValues::APP_STORE_CONNECT_API_KEY]
-    # sync_code_signing
+    # Syncs signing (sync_code_signing)
     match(
       type: "appstore",
       readonly: true,
@@ -40,15 +36,10 @@ platform :ios do
       git_basic_authorization: Base64.strict_encode64(ENV["MATCH_GIT_BASIC_AUTHORIZATION"])
     )
 
-    # increment_build_number(xcodeproj: "GHAT1.xcodeproj") # Does not keep version in sync between githup and local
-    # add cd "${PROJECT_DIR}" ; agvtool bump to build scheme
-
-    # Builds app
-    # build_app
+    # Builds app (build_app)
     gym(scheme: "GHAT1")
 
-    # Uploads app to TestFlight
-    # upload_to_testflight
+    # Uploads app to TestFlight (upload_to_testflight)
     pilot(skip_waiting_for_build_processing: true)
   end
 
