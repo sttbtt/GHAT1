@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		839999FC6815246B5D48C186 /* Pods_GHAT1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910E44A199C600FF8DF1FD1E /* Pods_GHAT1.framework */; };
 		F175C85B29EEF30C001744F9 /* GHAT1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F175C85A29EEF30C001744F9 /* GHAT1App.swift */; };
 		F175C85D29EEF30C001744F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F175C85C29EEF30C001744F9 /* ContentView.swift */; };
 		F175C85F29EEF30D001744F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F175C85E29EEF30D001744F9 /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B45F153583F2F2601EEAA86 /* Pods-GHAT1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHAT1.release.xcconfig"; path = "Target Support Files/Pods-GHAT1/Pods-GHAT1.release.xcconfig"; sourceTree = "<group>"; };
+		910E44A199C600FF8DF1FD1E /* Pods_GHAT1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHAT1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD811194D9332438C963F37E /* Pods-GHAT1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHAT1.debug.xcconfig"; path = "Target Support Files/Pods-GHAT1/Pods-GHAT1.debug.xcconfig"; sourceTree = "<group>"; };
 		F175C85729EEF30C001744F9 /* GHAT1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHAT1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F175C85A29EEF30C001744F9 /* GHAT1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAT1App.swift; sourceTree = "<group>"; };
 		F175C85C29EEF30C001744F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,17 +32,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839999FC6815246B5D48C186 /* Pods_GHAT1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022B40869947307B968CAF49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD811194D9332438C963F37E /* Pods-GHAT1.debug.xcconfig */,
+				1B45F153583F2F2601EEAA86 /* Pods-GHAT1.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		444AE39CB8FBAFF4A7CB952D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				910E44A199C600FF8DF1FD1E /* Pods_GHAT1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F175C84E29EEF30C001744F9 = {
 			isa = PBXGroup;
 			children = (
 				F175C85929EEF30C001744F9 /* GHAT1 */,
 				F175C85829EEF30C001744F9 /* Products */,
+				022B40869947307B968CAF49 /* Pods */,
+				444AE39CB8FBAFF4A7CB952D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F175C86529EEF30D001744F9 /* Build configuration list for PBXNativeTarget "GHAT1" */;
 			buildPhases = (
+				A8BDDFB8ECCD4524C51790CC /* [CP] Check Pods Manifest.lock */,
 				F175C85329EEF30C001744F9 /* Sources */,
 				F175C85429EEF30C001744F9 /* Frameworks */,
 				F175C85529EEF30C001744F9 /* Resources */,
+				0C6AEE4873219D910064D51C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C6AEE4873219D910064D51C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GHAT1/Pods-GHAT1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GHAT1/Pods-GHAT1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GHAT1/Pods-GHAT1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BDDFB8ECCD4524C51790CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GHAT1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F175C85329EEF30C001744F9 /* Sources */ = {
@@ -265,6 +334,7 @@
 		};
 		F175C86629EEF30D001744F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD811194D9332438C963F37E /* Pods-GHAT1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -272,7 +342,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 66;
 				DEVELOPMENT_ASSET_PATHS = "\"GHAT1/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5T2U5H555H;
@@ -305,6 +375,7 @@
 		};
 		F175C86729EEF30D001744F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B45F153583F2F2601EEAA86 /* Pods-GHAT1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,7 +383,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 65;
+				CURRENT_PROJECT_VERSION = 66;
 				DEVELOPMENT_ASSET_PATHS = "\"GHAT1/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5T2U5H555H;
