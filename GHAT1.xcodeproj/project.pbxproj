@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F11EB52729FC7FC2003F9D45 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11EB52629FC7FC2003F9D45 /* MainView.swift */; };
 		F175C85B29EEF30C001744F9 /* GHAT1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F175C85A29EEF30C001744F9 /* GHAT1App.swift */; };
-		F175C85D29EEF30C001744F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F175C85C29EEF30C001744F9 /* ContentView.swift */; };
 		F175C85F29EEF30D001744F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F175C85E29EEF30D001744F9 /* Assets.xcassets */; };
 		F175C86229EEF30D001744F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F175C86129EEF30D001744F9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F11EB52629FC7FC2003F9D45 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F175C85729EEF30C001744F9 /* GHAT1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHAT1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F175C85A29EEF30C001744F9 /* GHAT1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAT1App.swift; sourceTree = "<group>"; };
-		F175C85C29EEF30C001744F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F175C85E29EEF30D001744F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F175C86129EEF30D001744F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F176C82D29F032AA000C26EA /* GHAT1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GHAT1.entitlements; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 				F176C82E29F1B455000C26EA /* Info.plist */,
 				F176C82D29F032AA000C26EA /* GHAT1.entitlements */,
 				F175C85A29EEF30C001744F9 /* GHAT1App.swift */,
-				F175C85C29EEF30C001744F9 /* ContentView.swift */,
+				F11EB52629FC7FC2003F9D45 /* MainView.swift */,
 				F175C85E29EEF30D001744F9 /* Assets.xcassets */,
 				F175C86029EEF30D001744F9 /* Preview Content */,
 			);
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F175C85D29EEF30C001744F9 /* ContentView.swift in Sources */,
+				F11EB52729FC7FC2003F9D45 /* MainView.swift in Sources */,
 				F175C85B29EEF30C001744F9 /* GHAT1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +272,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 128;
+				CURRENT_PROJECT_VERSION = 171;
 				DEVELOPMENT_ASSET_PATHS = "\"GHAT1/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5T2U5H555H;
@@ -312,7 +312,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 128;
+				CURRENT_PROJECT_VERSION = 171;
 				DEVELOPMENT_ASSET_PATHS = "\"GHAT1/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5T2U5H555H;

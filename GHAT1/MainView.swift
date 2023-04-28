@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  GHAT1
 //
-//  Created by Scott Bennett on 4/18/23.
+//  Created by Scott Bennett on 4/28/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +19,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
