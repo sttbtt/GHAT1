@@ -6,6 +6,6 @@ target 'GHAT1' do
   use_frameworks!
 
   # Pods for GHAT1
-  pod 'SwiftyJSON'
+  # pod 'SwiftyJSON'
 
 end
