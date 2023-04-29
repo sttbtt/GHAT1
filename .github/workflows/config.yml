@@ -22,7 +22,7 @@ jobs:
         uses: swift-actions/setup-swift@v1
 
       - name: Run Lint
-        uses: apple-actions/action-swiftlint
+        uses: apple-actions/action-swiftlint@v1
 
       # - name: Install Homebrew
       #   run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
