@@ -1,8 +1,8 @@
 name: GitHub Actions v1
 
 on:
-  pull_request:
-    branches: [main, master, staging]
+  # pull_request:
+    # branches: [main, master, staging]
   workflow_dispatch:
 
 concurrency:
