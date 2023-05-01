@@ -4,9 +4,27 @@ on:
   # [push]
   workflow_dispatch:
 
-jobs:
-  build:
+concurrency:
+  group: build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
+jobs:
+  run-linters:
+    name: Run linter
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Swift
+        uses: swift-actions/setup-swift@v1
+
+      - name: Run Lint
+        uses: apple-actions/action-swiftlint@v1
+
+  build:
+    name: Test
     runs-on: macos-latest
 
     steps:
